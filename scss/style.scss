@@ -1,0 +1,30 @@
+@import './components/generals';
+
+@import './utilities/variables';
+@import './utilities/maps';
+@import './utilities/extend';
+@import './utilities/mixins';
+
+@import './components/body';
+@import './components/header';
+
+@import './pages/index/carousel';
+@import './pages/index/index';
+@import './pages/index/sections';
+
+@import './pages/aboutus/about';
+@import './pages/aboutus/grid';
+@import './pages/aboutus/enroll';
+
+@import './pages/divisions/divisions';
+@import './pages/divisions/section-div';
+
+@import './pages/partners/partners';
+@import './pages/partners/youtube';
+@import './pages/partners/cards';
+@import './pages/partners/reviewer';
+
+@import './pages/contact/contact';
+@import './pages/contact/video';
+
+@import './components/footer';

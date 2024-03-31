@@ -1,0 +1,79 @@
+.experience-section{
+    min-width: 100%;
+    height: 600px;
+    @extend %flex-box;
+    flex-flow: column, wrap;
+    color: $color-a;
+    background-image:linear-gradient(rgba(16, 16, 16, .7), rgba(16, 16, 16, .8)), url(../img/main/divisions/HOTELPROOF.jpg);
+    background-position: center;
+    background-size: cover;
+    .exp-section-content{
+        max-width: 60%;
+        padding: 20px;
+        font-size: 30px;
+        text-shadow: 2px 2px #000;
+        @include media-down(jr){
+            font-size: 20px;
+            }
+            @include media-down(md){
+                font-size: 18px; 
+            }
+            @include media-down(sm){
+               font-size: 16px;
+           }     
+        h3{
+            font-size: 40px;
+            span{
+                color: $color-terciary;
+            }
+            @include media-down(sm){
+                font-size: 30px;
+           }     
+        }
+    }
+}
+.newsletter{
+    min-width: 100%;
+    min-height: auto;
+    background-image:linear-gradient(rgba(16, 16, 16, .4), rgba(16, 16, 16, .5)), url(../img/main/divisions/beach.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    .newsletter-container{
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: $color-a;
+        text-shadow: 2px 2px #000;
+        .news-left{
+            h4{
+                color: $color-terciary;
+            }
+        }
+        .news-right{
+            input{
+                border: none;
+                background-color: #ffffff00;
+                color: $color-terciary;
+                text-shadow: 1px 1px #000;
+                outline: none;
+                &:focus {
+                    border-bottom: 3px solid $color-text;
+                }
+                &:active {
+                    border: none;
+                }
+            }
+            button{
+                padding: 5px;
+                border-radius: 10px;
+                border: none;
+                color: $color-a;
+                background-color: $color-terciary;
+                &:hover{
+                    background-color: $color-text;
+                }
+            }
+        }
+    }
+}

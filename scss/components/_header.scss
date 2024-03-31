@@ -1,0 +1,169 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.4rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    .logo img{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -45px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 10px;
+        gap: 40px;
+        margin-top: 20px;
+        @include media-down(ns){
+            position: absolute;
+            top: 82%;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            backdrop-filter: blur(50px);
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+            transition: .3s ease;
+        }
+        a{
+            color: $color-a;
+            text-transform: uppercase;
+            font-size: 17px;
+            text-shadow: 0 0 5px #000;
+            &:hover{
+                color: $color-terciary;
+            }
+            @include media-down(ns){
+            position: relative;
+            left: 50%;
+            transform: translateY(-50px);
+            transition: .3 ease;
+            }
+        }
+    }
+    #check{
+        position: relative;
+        left: 380px;
+        display: none;
+    }
+    #close-icon{
+        display: none;
+    }
+    .bar-icon{
+        font-size: 2.8rem;
+        color: $color-a;
+        cursor: pointer;
+        display: none;
+        @include media-down(ns){
+            display: block;
+        }
+    }
+    #check:checked~.bar-icon #menu-icon{
+        display: none;
+        @include media-down(ns){
+            display: none;
+        }
+    }
+    #check:checked~.bar-icon #close-icon{
+        @include media-down(ns){
+            display: block;
+        } 
+    }
+    #check:checked~ul{
+        @include media-down(ns){
+            height: 18.7rem;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .1);
+            transform: translateY(-5px);
+            z-index: -2;
+        } 
+    }
+    #check:checked~ul a{
+        @include media-down(ns){
+            transform: translateY(0);
+        } 
+    }
+    .search-container{
+        position: relative;
+        bottom: 10px;
+        left: 10px;
+        input{
+            padding: 10px;
+            padding-right: 35px;
+            border-radius: 5px 0 0 5px;
+            border: 0;
+            outline: none;
+        }
+        button{
+            @include media-down(ns){
+                display: none;
+            }
+        }
+        button i{
+            background-color: $color-main;
+            padding: 10px;
+            position: absolute;
+            border: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 0 5px 5px 0;
+            color: $color-a;
+            cursor: pointer;
+            &:hover{
+                background-color: $color-terciary;
+                color: $color-text;
+            }
+            @include media-down(ns){
+             box-shadow: 3px -3px black;
+            }
+        }
+    }
+    @include media-down(jr){
+        .search-container input{
+            display: none;
+        }
+        .search-container button{
+            padding: 15px 10px;
+            border-radius: 40px;
+            i{
+                border-radius: 40px;
+            }
+        }
+    }
+    &:hover::after{
+        left: 100%;
+    }
+}
+
+
+nav::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+min-width: 100%;
+height: 100%;
+backdrop-filter: blur(50px);
+background-color: rgba(0, 0, 0, .1);
+z-index: -1;
+}
+nav::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: -100%;
+    min-width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255, .4), transparent);
+    transition: .5s;
+}

@@ -1,0 +1,24 @@
+.us-menu{
+    @extend %separation-mark;
+    text-align: center;
+    color: $color-a;
+    .us{
+        height: 300px;
+        padding: 20px;
+        background-image: url(/img/main/aboutus/Europe-2-1366x350.webp);
+        background-size: cover;
+        background-position: center;
+        text-shadow: 2px 2px #000;
+    }
+    .us-container{
+        min-height: auto;
+        padding: 20px;
+        h2{
+                color: $color-terciary;
+                text-shadow: 2px 2px #000;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+}

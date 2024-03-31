@@ -1,0 +1,30 @@
+.youtube-videos{
+    min-width: 100%;
+    min-height: auto;
+    padding: 30px;
+    background: $color-a;
+    color: $color-terciary;
+    text-shadow: 1px 1px #000;
+    h2{
+        position: relative;
+        left: 400px;
+    @include media-down(jr){
+        left: 300px;
+    }    
+    @include media-down(ns){
+        left: 200px;
+    }    
+    }
+    .videos-cards{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        .card{
+            border: 5px solid #000;
+        }
+        @include media-down(jr){
+        flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.partners-cards{
+    min-width: 100%;
+    min-height: auto;
+    padding: 30px;
+    @extend %flex-box;
+    flex-wrap: wrap;
+    gap: 50px;
+    background: linear-gradient(to bottom, $color-a, $color-text);
+    .card{
+        min-height: 400px;
+        background: #0064f983;
+        color: #000;
+        text-align: center;
+        img{
+            min-height: 200px;
+            object-fit: cover;
+        }
+        a{
+            color: #000;
+            background-color: transparent;
+            border: none;
+            &:hover{
+                background-color: $color-terciary;
+                color: $color-a;
+                text-shadow: 1px 1px #000;
+                box-shadow: 0 0 10px $color-terciary;
+            }
+        }
+    }
+}
+.partners-social{
+    padding: 20px;
+    @extend %flex-box;
+    justify-content: space-evenly;
+    color: $color-a;
+    text-shadow: 1px 1px #000;
+    background-color: $color-text;
+    .p-s-txt{
+        font-size: 40px;
+    }
+    .p-s-socials{
+        font-size: 40px;
+        word-spacing: 30px;
+        a{
+            color: $color-a;
+            &:hover i{
+                color: $color-terciary;
+                transform: scale(1.04);
+            }
+        }
+    }
+}

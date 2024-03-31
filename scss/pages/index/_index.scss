@@ -1,0 +1,45 @@
+.presentation{
+    .presentation-container{
+        min-width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        color: $color-a;
+        .hr{
+            position: relative;
+            width: 50%;
+            left: 25%;
+        }
+        h1{
+            color: $color-terciary;
+        }
+        p{
+            position: relative;
+            width: 70%;
+            left: 15%;
+        }
+    }
+}
+.mission{
+    .mission-container{
+        min-width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        color: $color-a;
+        margin-top: 30px;
+        .hr{
+            position: relative;
+            width: 50%;
+            left: 25%;
+        }
+        h2{
+            color: $color-terciary;
+        }
+        p{
+            position: relative;
+            width: 70%;
+            left: 15%;
+        }
+    }
+}
